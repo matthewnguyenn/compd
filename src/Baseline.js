@@ -12,22 +12,31 @@ function Baseline({ onContinue, onBack }) {
       <p>where are you today</p>
 
       <div className="metric-row">
-        <span className="blue">| sleep</span>
-        <input type="number" value={sleep} onChange={(e) => setSleep(e.target.value)} /> hrs
+        <span className="blue metric-label">| sleep</span>
+        <div style={{display:'flex', alignItems:'center', gap:'6px'}}>
+          <input type="number" value={sleep} onChange={(e) => setSleep(e.target.value)} />
+          <span style={{color:'white', fontWeight:'700'}}>hrs</span>
+        </div>
       </div>
 
       <div className="metric-row">
-        <span className="green">| study</span>
-        <input type="number" value={study} onChange={(e) => setStudy(e.target.value)} /> hrs
+        <span className="green metric-label">| study</span>
+        <div style={{display:'flex', alignItems:'center', gap:'6px'}}>
+          <input type="number" value={study} onChange={(e) => setStudy(e.target.value)} />
+          <span style={{color:'white', fontWeight:'700'}}>hrs</span>
+        </div>
       </div>
 
       <div className="metric-row">
-        <span className="orange">| active</span>
-        <input type="number" value={active} onChange={(e) => setActive(e.target.value)} /> mins
+        <span className="orange metric-label">| active</span>
+        <div style={{display:'flex', alignItems:'center', gap:'6px'}}>
+          <input type="number" value={active} onChange={(e) => setActive(e.target.value)} />
+          <span style={{color:'white', fontWeight:'700'}}>mins</span>
+        </div>
       </div>
 
-      <button onClick={onBack}>back</button>
-      <button onClick={() => onContinue({ sleep, study, active })}>continue</button>
+      <button style={{marginTop:'32px'}} onClick={() => onContinue({ sleep, study, active })}>continue</button>
+      <button className="back-link" onClick={onBack}>back</button>
     </div>
   );
 }
