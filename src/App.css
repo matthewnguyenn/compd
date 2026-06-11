@@ -1,38 +1,94 @@
 .App {
+  background-color: #0D0D18;
+  min-height: 100vh;
+  padding: 24px;
+}
+h1 {
+  color: #3D5AF1;
+  font-size: 22px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: white;
+  font-size: 34px;
+  margin-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: #888888;
+  font-size: 14px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  display: block;
+  width: 100%;
+  background-color: #1C1C2E;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  color: #aaaaaa;
+  font-size: 14px;
+  margin-top: 14px;
+}
+button {
+  display: block;
+  width: 100%;
+  background-color: #3D5AF1;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 16px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+* {
+  font-family: 'Inter', sans-serif;
+}
+.metric-row {
+  background-color: #1C1C2E;
+  border-radius: 14px;
+  padding: 16px 18px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 14px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.blue { color: #3D5AF1; }
+.green { color: #22C55E; }
+.orange { color: #F97316; }
+.metric-row.tall {
+  align-items: flex-start;
+  padding: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-cols {
+  display: flex;
+  gap: 24px;
+}
+
+.home-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.col-label {
+  font-size: 11px;
+  color: #666666;
+}
+
+.col-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  text-align: right;
+  margin-top: 0;
+  margin-left: auto;
 }
